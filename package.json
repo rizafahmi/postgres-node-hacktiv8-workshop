@@ -15,9 +15,12 @@
     "knex": "0.95.2",
     "massive": "6.7.1",
     "pg": "8.5.1",
-    "pg-promise": "^10.9.2"
+    "pg-hstore": "2.3.3",
+    "pg-promise": "^10.9.2",
+    "sequelize": "6.5.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "6.2.0"
   }
 }
