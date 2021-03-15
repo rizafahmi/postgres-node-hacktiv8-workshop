@@ -2,6 +2,7 @@ dependencies:
   body-parser: 1.19.0
   express: 4.17.1
   knex: 0.95.2_pg@8.5.1
+  massive: 6.7.1
   pg: 8.5.1
   pg-promise: 10.9.5
 devDependencies:
@@ -81,7 +82,6 @@ packages:
     resolution:
       integrity: sha512-7q9uNH/Dh8gFgpIIb9ja8PJEWA5AQy3xnBC8jtKs8K/gNVCr1K6kIvlm59HUyYgvM7oEDoLzGgPcGd9FqhtXEQ==
   /balanced-match/1.0.0:
-    dev: true
     resolution:
       integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
   /binary-extensions/2.2.0:
@@ -126,7 +126,6 @@ packages:
     dependencies:
       balanced-match: 1.0.0
       concat-map: 0.0.1
-    dev: true
     resolution:
       integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
   /braces/3.0.2:
@@ -233,7 +232,6 @@ packages:
     resolution:
       integrity: sha512-pRxBna3MJe6HKnBGsDyMv8ETbptw3axEdYHoqNh7gu5oDcew8fs0xnivZGm06Ogk8zGAJ9VX+OPEr2GXEQK4dg==
   /concat-map/0.0.1:
-    dev: true
     resolution:
       integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
   /configstore/5.0.1:
@@ -466,6 +464,10 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
+  /fs.realpath/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
   /fsevents/2.3.2:
     dev: true
     engines:
@@ -507,6 +509,17 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==
+  /glob/7.1.6:
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 3.0.4
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+    dev: false
+    resolution:
+      integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
   /global-dirs/2.1.0:
     dependencies:
       ini: 1.3.7
@@ -615,6 +628,13 @@ packages:
       node: '>=0.8.19'
     resolution:
       integrity: sha1-khi5srkoojixPcT7a21XbyMUU+o=
+  /inflight/1.0.6:
+    dependencies:
+      once: 1.4.0
+      wrappy: 1.0.2
+    dev: false
+    resolution:
+      integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=
   /inherits/2.0.3:
     dev: false
     resolution:
@@ -812,6 +832,20 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==
+  /massive/6.7.1:
+    dependencies:
+      commander: 7.1.0
+      glob: 7.1.6
+      lodash: 4.17.21
+      murmurhash: 1.0.0
+      pg-promise: 10.9.5
+      pg-query-stream: 4.0.0
+    dev: false
+    engines:
+      node: '>= 8.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-b4j4aYpET1CqntFIVjLqtQGJ/VciSTt9c7q4WkVf56sL6nzDkstvzojMsjDU9qLvilRGfFw3EasVeQqForx6rw==
   /media-typer/0.3.0:
     dev: false
     engines:
@@ -858,7 +892,6 @@ packages:
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.11
-    dev: true
     resolution:
       integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
   /minimist/1.2.5:
@@ -880,6 +913,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
+  /murmurhash/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-u/NfpXS+viMWAupgU6IkwAVWkVnpvzS+D9bDxNuNRUoQ0BRMZ1DK/dPH6Qrknn7RxMHVQBpYBQQigUt7of6RiQ==
   /negotiator/0.6.2:
     dev: false
     engines:
@@ -935,7 +972,6 @@ packages:
   /once/1.4.0:
     dependencies:
       wrappy: 1.0.2
-    dev: true
     resolution:
       integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
   /p-cancelable/1.1.0:
@@ -965,6 +1001,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==
+  /path-is-absolute/1.0.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
   /path-parse/1.0.6:
     dev: false
     resolution:
@@ -977,6 +1019,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-3iBXuv7XKvxeMrIgym7njT+HlZkwZqqGX4Bu9cci8xHZNT+Um1gWKqCsAzcC0d95rcKMU5WBg6YRUcHyV0HZKQ==
+  /pg-cursor/2.5.2:
+    dev: false
+    resolution:
+      integrity: sha512-yS0lxXA5WoIVK7BUgJr1uOJDJe5JxVezItTLvqnTXj6bF3di4UtQOrPx8RW3GpFmom2NTQfpEc2N6vvdpopQSw==
   /pg-int8/1.0.1:
     dev: false
     engines:
@@ -1012,6 +1058,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-El+aXWcwG/8wuFICMQjM5ZSAm6OWiJicFdNYo+VY3QP+8vI4SvLIWVe51PppTzMhikUJR+PsyIFKqfdXPz/yxA==
+  /pg-query-stream/4.0.0:
+    dependencies:
+      pg-cursor: 2.5.2
+    dev: false
+    resolution:
+      integrity: sha512-Jftit2EUBn+ilh4JtAgw0JXKR54vATmYHlZ4fmIlbZgL1qT/GKUuwMzLFT8QQm+qJHZwlRIIfkMUOP7soY38ag==
   /pg-types/2.2.0:
     dependencies:
       pg-int8: 1.0.1
@@ -1499,7 +1551,6 @@ packages:
     resolution:
       integrity: sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==
   /wrappy/1.0.2:
-    dev: true
     resolution:
       integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
   /write-file-atomic/3.0.3:
@@ -1527,6 +1578,7 @@ specifiers:
   body-parser: ^1.19.0
   express: ^4.17.1
   knex: 0.95.2
+  massive: 6.7.1
   nodemon: ^2.0.7
   pg: 8.5.1
   pg-promise: ^10.9.2
